@@ -2,8 +2,8 @@
 
 echo " Je suis un lanceur"
 
-echo "==> lancement de bonjour.bash"
-./bonjour.bash
-
-echo "==> lancement de aurevoir.bash"
-./aurevoir.bash
+for file in $(ls | grep -v lanceur)
+do
+    echo "==> lancement de $file"
+    ./$file
+done
